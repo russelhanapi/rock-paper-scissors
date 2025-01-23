@@ -26,3 +26,26 @@ const playRound = function (computerChoice, humanChoice) {
     return 'computer';
   } else return 'human';
 };
+
+const playGame = function (rounds) {
+  let computerScore = 0;
+  let humanScore = 0;
+
+  for (let i = 0; i < rounds; i++) {
+    const computerSelection = getComputerChoice();
+    const humanSelection = getHumanChoice();
+
+    const result = playRound(computerSelection, humanSelection);
+    if (result === 'computer') computerScore++;
+    if (result === 'human') humanScore++;
+  }
+  console.log(
+    `${
+      computerScore > humanScore
+        ? '💻 Computer'
+        : humanScore > computerScore
+        ? '😁 You'
+        : "It's a tie!"
+    }`
+  );
+};
