@@ -15,3 +15,14 @@ const getHumanChoice = function () {
         .toLowerCase()
         .trim();
 };
+
+const playRound = function (computerChoice, humanChoice) {
+  if (computerChoice === humanChoice) return 'tie';
+  if (
+    (computerChoice === 'rock' && humanChoice === 'scissors') ||
+    (computerChoice === 'paper' && humanChoice === 'rock') ||
+    (computerChoice === 'scissors' && humanChoice === 'paper')
+  ) {
+    return 'computer';
+  } else return 'human';
+};
