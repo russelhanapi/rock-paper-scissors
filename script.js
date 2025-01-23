@@ -49,3 +49,5 @@ const playGame = function (rounds) {
     }`
   );
 };
+
+playGame(5);
