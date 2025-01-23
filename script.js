@@ -42,9 +42,9 @@ const playGame = function (rounds) {
   console.log(
     `${
       computerScore > humanScore
-        ? '💻 Computer'
+        ? '💻 Computer won!'
         : humanScore > computerScore
-        ? '😁 You'
+        ? '😁 You won!'
         : "It's a tie!"
     }`
   );
